@@ -39,20 +39,19 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Custom colors for the design */
+    --brand-blue: 214 100% 50%;
+    --brand-blue-dark: 214 100% 40%;
+    --text-gray: 0 0% 43%;
+    --bg-light: 225 25% 98%;
   }
 
   .dark {
@@ -92,12 +91,13 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Custom colors for the design */
-    --brand-blue: 214 100% 50%;
-    --brand-blue-dark: 214 100% 40%;
-    --text-gray: 0 0% 43%;
-    --bg-light: 225 25% 98%;
+    /* Custom colors for dark mode */
+    --brand-blue: 214 100% 60%;
+    --brand-blue-dark: 214 100% 50%;
+    --text-gray: 0 0% 70%;
+    --bg-light: 240 10% 5%;
   }
+}
 
 @layer base {
   * {
