@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './ui/Button';
+import { Button } from './ui/button';
 
 export const Hero: React.FC = () => {
   const handleGetStarted = () => {
@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="w-full h-[1195px] relative flex flex-col items-center justify-start pt-[31px] max-md:h-auto max-md:p-5">
+    <section id="hero" className="w-full h-[1195px] relative flex flex-col items-center justify-start pt-[31px] max-md:h-auto max-md:p-5">
       <header className="w-[1463px] h-[490px] flex flex-col justify-center text-center text-[90px] font-semibold tracking-[0.196px] max-md:w-full max-md:text-6xl max-md:h-auto max-md:mb-10 max-sm:text-4xl max-sm:px-5 max-sm:py-0">
         <h1 className="bg-clip-text">
           <div>Transforme seu Negócio com</div>
@@ -21,9 +21,9 @@ export const Hero: React.FC = () => {
       
       <div className="w-[1278px] h-[136px] relative flex justify-center items-center mb-[67px] max-md:w-full max-md:h-auto max-md:mb-10">
         <Button
-          size="lg"
+          variant="hero"
+          size="hero"
           onClick={handleGetStarted}
-          className="text-white"
         >
           Comece Agora
         </Button>

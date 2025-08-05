@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './Button';
+import { Button } from './button';
 
 interface ServiceCardProps {
   title: string;
@@ -29,9 +29,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         {description}
       </p>
       <Button
-        size="md"
+        variant="hero"
+        size="heroMd"
         onClick={onButtonClick}
-        className="max-sm:w-[220px] max-sm:h-10"
       >
         {buttonText}
       </Button>
