@@ -147,7 +147,7 @@ function HeroGeometric({
             </div>
 
             <div className="relative z-10 container mx-auto px-4 md:px-6">
-                <div className="max-w-3xl mx-auto text-center">
+                <div className="max-w-3xl mx-auto text-center pb-32 md:pb-40">
                     <motion.div
                         variants={fadeUpVariants}
                         initial="hidden"
@@ -210,7 +210,7 @@ function HeroGeometric({
             </div>
 
             {/* Phone Image at bottom */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -220,7 +220,7 @@ function HeroGeometric({
                     <img 
                         src="/lovable-uploads/f577ce39-fcd0-42db-a699-e405e596667d.png" 
                         alt="Smartphone with app"
-                        className="w-32 h-auto md:w-40 lg:w-48 drop-shadow-2xl"
+                        className="w-48 h-auto md:w-56 lg:w-64 xl:w-72 drop-shadow-2xl"
                     />
                 </motion.div>
             </div>
