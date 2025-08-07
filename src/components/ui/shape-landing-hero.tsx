@@ -167,7 +167,7 @@ function HeroGeometric({
                         animate="visible"
                         transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
                     >
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
                                 {title1}
                             </span>
@@ -188,7 +188,7 @@ function HeroGeometric({
                         animate="visible"
                         transition={{ delay: 0.9, duration: 1, ease: "easeOut" }}
                     >
-                        <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+                        <p className="text-base sm:text-lg md:text-lg text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
                             {description}
                         </p>
                     </motion.div>
@@ -207,6 +207,22 @@ function HeroGeometric({
                         </button>
                     </motion.div>
                 </div>
+            </div>
+
+            {/* Phone Image at bottom */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.3, duration: 1, ease: "easeOut" }}
+                    className="relative"
+                >
+                    <img 
+                        src="/lovable-uploads/f577ce39-fcd0-42db-a699-e405e596667d.png" 
+                        alt="Smartphone with app"
+                        className="w-32 h-auto md:w-40 lg:w-48 drop-shadow-2xl"
+                    />
+                </motion.div>
             </div>
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
