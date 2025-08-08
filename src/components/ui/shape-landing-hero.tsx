@@ -73,11 +73,11 @@ function ElegantShape({
 }
 
 function HeroGeometric({
-    badge = "Design Collective",
-    title1 = "Elevate Your Digital Vision",
-    title2 = "Crafting Exceptional Websites",
-    description = "Crafting exceptional digital experiences through innovative design and cutting-edge technology.",
-    buttonText = "Get Started",
+    badge = "Automação com IA",
+    title1 = "Transforme seu Negócio com",
+    title2 = "Inteligência Artificial",
+    description = "Automatize atendimento, aumente vendas e transforme a experiência dos seus clientes 24h por dia.",
+    buttonText = "Quero vender mais",
     onButtonClick,
 }: {
     badge?: string;
@@ -96,8 +96,8 @@ function HeroGeometric({
     };
 
     return (
-        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800/70 to-white">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
+        <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/[0.1] via-transparent to-indigo-600/[0.1] blur-3xl" />
 
             <div className="absolute inset-0 overflow-hidden">
                 <ElegantShape
@@ -167,14 +167,13 @@ function HeroGeometric({
                         animate="visible"
                         transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
                     >
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-tight leading-tight">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/90 block">
                                 {title1}
                             </span>
-                            <br />
                             <span
                                 className={cn(
-                                    "bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 "
+                                    "bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-400 block"
                                 )}
                             >
                                 {title2}
@@ -201,7 +200,7 @@ function HeroGeometric({
                     >
                         <button
                             onClick={onButtonClick}
-                            className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-600 hover:to-rose-600 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                            className="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-blue-500/25"
                         >
                             {buttonText}
                         </button>
