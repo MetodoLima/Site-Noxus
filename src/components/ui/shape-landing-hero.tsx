@@ -6,6 +6,32 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 
+function AnimatedText() {
+    const [currentText, setCurrentText] = useState(0);
+    const texts = ["Inteligência Artificial", "tecnologia", "a Noxus"];
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentText((prev) => (prev + 1) % texts.length);
+        }, 2500);
+        
+        return () => clearInterval(interval);
+    }, []);
+    
+    return (
+        <motion.span
+            key={currentText}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-400 block"
+        >
+            {texts[currentText]}
+        </motion.span>
+    );
+}
+
 function ElegantShape({
     className,
     delay = 0,
@@ -171,13 +197,7 @@ function HeroGeometric({
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/90 block">
                                 {title1}
                             </span>
-                            <span
-                                className={cn(
-                                    "bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-300 to-indigo-400 block"
-                                )}
-                            >
-                                {title2}
-                            </span>
+                            <AnimatedText />
                         </h1>
                     </motion.div>
 
