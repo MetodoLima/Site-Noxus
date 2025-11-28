@@ -21,17 +21,18 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   reverse = false
 }) => {
   const content = (
-    <div className="w-[557px] flex flex-col items-start max-md:w-full max-md:items-center max-md:mb-10">
-      <h3 className="w-96 h-[92px] text-[#1D1D1F] text-4xl font-semibold leading-[44px] mb-2.5 max-md:w-full max-md:text-[28px] max-md:h-auto max-md:text-center max-sm:text-[22px]">
+    <div className="w-3/4 md:w-1/3 flex flex-col items-start max-md:items-center max-md:mb-8 px-4 md:px-8">
+      <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-medium leading-tight mb-4 max-md:text-center">
         {title}
       </h3>
-      <p className="w-[557px] h-[146px] text-[#6E6E73] text-[19px] font-semibold leading-[29px] tracking-[0.231px] mb-3 max-md:w-full max-md:text-base max-md:h-auto max-md:text-center max-sm:text-sm">
+      <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 max-md:text-center">
         {description}
       </p>
       <Button
-        variant="hero"
-        size="heroMd"
+        variant="services"
+        size="lg"
         onClick={onButtonClick}
+        className="rounded-full"
       >
         {buttonText}
       </Button>
@@ -42,23 +43,14 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
     <img
       src={image}
       alt={altText}
-      className="w-[661px] h-[990px] shrink-0 max-md:w-[400px] max-md:h-auto max-sm:w-[280px]"
+      className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain shrink-0"
     />
   );
 
   return (
-    <div className="flex items-start justify-between w-full max-w-[1624px] mt-0 mb-[317px] mx-auto px-[156px] py-0 max-md:flex-col max-md:items-center max-md:text-center max-md:mb-20 max-md:p-0">
-      {reverse ? (
-        <>
-          {imageElement}
-          {content}
-        </>
-      ) : (
-        <>
-          {content}
-          {imageElement}
-        </>
-      )}
+    <div className={`flex items-center justify-center gap-8 w-full container mx-auto px-4 py-4 flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+            {imageElement}
+      {content}
     </div>
   );
 };

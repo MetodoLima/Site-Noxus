@@ -3,11 +3,7 @@ import { HeroGeometric } from './ui/shape-landing-hero';
 
 export const Hero: React.FC = () => {
   const handleGetStarted = () => {
-    // Scroll to features section or handle navigation
-    const featuresSection = document.getElementById('features');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.open('https://wa.me/558596437539', '_blank', 'noopener,noreferrer');
   };
 
   return (

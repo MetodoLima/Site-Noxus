@@ -9,40 +9,44 @@ import {
 const FAQ: React.FC = () => {
   const faqs = [
     {
-      question: "Quanto tempo leva para desenvolver um site?",
-      answer: "O prazo varia de acordo com a complexidade do projeto. Sites simples podem ser entregues em 1-2 semanas, enquanto projetos mais complexos podem levar de 4-8 semanas. Durante a consulta inicial, fornecemos um cronograma detalhado."
+      question: "A IA fala igual ao atendimento da minha empresa ou fica com 'cara de robô'?",
+      answer: "A IA é 100% personalizada: tom de voz, gírias, horário de atendimento, regras de negócio, catálogo, preços e políticas internas. Ela fala como você deseja — natural, educada e adaptada ao seu público."
     },
     {
-      question: "Vocês fazem manutenção após a entrega?",
-      answer: "Sim! Oferecemos pacotes de manutenção mensal que incluem atualizações de segurança, backup, monitoramento e suporte técnico. Também fornecemos 30 dias de suporte gratuito após a entrega."
+      question: "Como funciona a loja virtual?",
+      answer: "Montamos o seu e-commerce totalmente do zero e integramos no seu WhatsApp para você organizar os pedidos e suas vendas com um dashboard completo."
     },
     {
-      question: "O site será responsivo para mobile?",
-      answer: "Absolutamente! Todos os nossos sites são desenvolvidos com design responsivo, garantindo uma experiência perfeita em dispositivos móveis, tablets e desktops. O mobile-first é nossa prioridade."
+      question: "Eu preciso entender de tecnologia para usar?",
+      answer: "Não! Você recebe tudo pronto, configurado e funcionando. E acompanha tudo por um dashboard simples e intuitivo, com métricas como atendimentos, vendas, agendamentos e tempo economizado."
     },
     {
-      question: "Posso fazer alterações no conteúdo depois?",
-      answer: "Sim! Desenvolvemos sites com painéis administrativos intuitivos que permitem que você atualize textos, imagens e outros conteúdos facilmente. Também oferecemos treinamento para uso da plataforma."
+      question: "Como funciona o suporte?",
+      answer: "Você tem suporte direto via WhatsApp com a equipe Noxus. Fazemos ajustes, atualizações, melhorias e novas configurações sempre que precisar."
     },
     {
-      question: "Vocês trabalham com SEO?",
-      answer: "Sim! Todos os nossos sites são otimizados para mecanismos de busca desde o desenvolvimento. Implementamos estrutura adequada, meta tags, velocidade de carregamento e outras práticas de SEO técnico."
+      question: "Preciso assinar contrato?",
+      answer: "Não. A Noxus trabalha com mensalidade, sem fidelidade — você permanece porque tem resultado."
     },
     {
-      question: "Qual é o investimento para um site?",
-      answer: "Os valores variam conforme as funcionalidades e complexidade do projeto. Oferecemos orçamentos personalizados após entender suas necessidades. Entre em contato para receber uma proposta detalhada."
+      question: "Vocês apenas colocam a IA no WhatsApp?",
+      answer: "Não! Montamos todo o fluxo de atendimento, desde a primeira mensagem até o pós-venda. Automatizamos tudo com IA e ainda treinamos sua equipe para que o atendimento humano acompanhe o mesmo padrão profissional."
+    },
+    {
+      question: "Vocês organizam o catálogo e os produtos do e-commerce?",
+      answer: "Além de criar seu catálogo modelo e-commerce, nós cuidamos de tudo: organização do catálogo, adição de novos produtos, atualização de preços, variações como cor e tamanho, e até a estrutura das categorias. Seu e-commerce fica sempre atualizado e pronto pra vender."
     }
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-gradient-to-b from-[#020811] to-[#449CE1]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-medium text-white mb-4">
               Perguntas Frequentes
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-center text-sm md:text-base text-white">
               Tire suas dúvidas sobre nossos serviços
             </p>
           </div>
@@ -50,10 +54,10 @@ const FAQ: React.FC = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-lg font-medium">
+                <AccordionTrigger className="text-left text-base md:text-lg font-medium text-white hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-left text-sm md:text-base text-white leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

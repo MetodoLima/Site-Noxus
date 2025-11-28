@@ -1,9 +1,11 @@
 import React from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
+import { ResultsSection } from '@/components/ResultsSection';
 import { Features } from '@/components/Features';
 import { Services } from '@/components/Services';
-import { CTA } from '@/components/CTA';
+
+import { CallToAction } from '@/components/CallToAction';
 import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
 
@@ -13,10 +15,12 @@ const Index: React.FC = () => {
       <Navbar />
       <main className="w-full max-w-[1936px] relative mx-auto my-0 pt-16">
         <Hero />
+        <ResultsSection />
         <Features />
         <Services />
       </main>
-      <CTA />
+      
+      <CallToAction />
       <FAQ />
       <Footer />
     </>
